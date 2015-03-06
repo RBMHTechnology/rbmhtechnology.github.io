@@ -1,0 +1,538 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "reset";
+@import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: $white;
+  font: 16px/1.4 $opensans;
+  color: $darkGray;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $futuracomboldcondensed;
+  color: $darkGray;
+  font-weight: bold;
+
+  line-height: 1;
+  margin: 1em 0 15px;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+nav a {
+  font-family: $opensans;
+  text-transform: uppercase;
+}
+
+
+h1 {
+  font-size: 30px;
+  a {
+    color: inherit;
+  }
+  a.authorlist {
+    color: $red;
+  }
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 24px;
+  a {
+    color: inherit;
+  }
+  a.authorlist {
+    color: $red;
+  }
+}
+
+.titlearea h2 {
+  padding-top: 12px;
+}
+
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  color: $darkGray;
+}
+
+p {
+  margin: 15px 0;
+}
+
+a {
+  color: $red;
+  text-decoration: none;
+	cursor: pointer;
+  &:hover, &:active {
+    color: $red;
+  }
+}
+
+ul, ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+  margin: 0;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid $lightGray;
+  margin-top: 30px;
+}
+
+
+.date {
+  font-style: italic;
+  color: $darkGray;
+}
+
+// Specify the color of the selection
+::-moz-selection {
+  color: $black;
+  background: $lightGray;
+}
+::selection {
+  color: $black;
+  background: $lightGray;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+// Blockquote Style
+
+blockquote {
+  background: $verylightGray;
+  border-left: 5px solid $lightBlue;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: $lightBlue;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.15em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+
+// tables
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $darkBlue;
+  margin: 25px auto;
+  background: white;
+}
+th {
+  background: $lightBlue;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  border: 1px solid $darkBlue;
+  box-shadow: inset 0px 1px 2px $lightBlue;
+  transition: all 0.2s;
+
+}
+tr {
+  border-bottom: 1px solid $lightGray;
+}
+tr:last-child {
+  border-bottom: 0px;
+}
+td {
+  border-right: 1px solid $lightGray;
+  padding: 10px;
+  transition: all 0.2s;
+}
+td:last-child {
+  border-right: 0px;
+}
+td.selected {
+  background: $verylightGray;
+}
+td input {
+  font-size: 14px;
+  background: none;
+  outline: none;
+  border: 0;
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+}
+td input:focus {
+  box-shadow: 0 1px 0 $lightBlue;
+  color: $lightBlue;
+}
+::-moz-selection {
+  background: $lightBlue;
+  color:$white;
+}
+::selection {
+  background: $lightBlue;
+  color: $white;
+}
+
+
+/*********************/
+/* LAYOUT / SECTIONS */
+/*********************/
+
+//
+// .masthead
+//
+
+.wrapper-masthead {
+  margin-bottom: 50px;
+}
+
+.masthead {
+  padding: 20px 0;
+  border-bottom: 1px solid $lightGray;
+
+  @include mobile {
+    text-align: center;
+  }
+}
+
+#gonnaBeOnTheBottom {
+  padding-top: 12px;
+}
+
+.site-avatar {
+  float: left;
+  width: 150px;
+  margin-right: 100px;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.site-info {
+  float: left;
+  text-align: center;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.site-name {
+  margin: 0;
+  color: $darkGray;
+  cursor: pointer;
+  font-family: $futuracomboldcondensed;
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.site-description {
+  font-family: $opensanscondensed;
+  text-transform: uppercase;
+  margin: -2px 0 0 0;
+  color: $darkGray;
+  font-size: 18px;
+  font-weight: bold;
+
+  @include mobile {
+    margin: 3px 0;
+  }
+}
+
+.site-description a {
+  color: $darkGray;
+}
+
+nav {
+  float: right;
+  margin-top: 3px;
+  font-family: $futuracomboldcondensed;
+  font-size: 18px;
+
+  @include mobile {
+    float: none;
+    margin-top: 9px;
+    display: block;
+    font-size: 16px;
+  }
+
+  a {
+    margin-left: 5px;
+    color: $darkGray;
+    text-align: right;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+    @include mobile {
+      margin: 0 10px;
+      color: $lightBlue;
+    }
+  }
+}
+
+
+// Square Navigation
+
+nav ul {
+  list-style: none; overflow: hidden; position: relative;
+}
+
+nav ul li a {
+  color: $white;
+}
+
+nav span i {
+  margin-top: 10px;
+}
+
+nav span {
+  display:table;
+  margin:0 auto;
+}
+nav ul li {
+  float: left;
+}
+nav ul li a {
+  display: inherit; width: 40px; height: 40px;
+}
+nav ul li:nth-child(1) a {
+  background-color: $lightBlue;
+}
+nav ul li:nth-child(2) a {
+  background-color: $darkYellow;
+}
+nav ul li:nth-child(3) a {
+  background-color: $red;
+}
+nav ul li:nth-child(4) a {
+  background-color: $yellow;
+}
+
+nav select {
+  height: 40px;
+  border-color: $lightBlue;
+  font-family: $opensans;
+  font-size: 12px;
+}
+
+.rbicons {
+  color: white;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.eventuate {
+  background-color: $darkYellow;
+}
+.nextproject {
+  background-color: $red;
+}
+
+@media (max-width: 711px) {
+  nav ul {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 0px;
+    margin: 0px;
+  }
+  nav a {
+    margin: 0px;
+  }
+}
+
+//
+// .main
+//
+
+.posts > .post {
+  padding-bottom: 2em;
+  border-bottom: 1px solid $lightGray;
+}
+
+.posts > .post:last-child {
+  padding-bottom: 1em;
+  border-bottom: none;
+}
+
+.post {
+  blockquote {
+    margin: 1.8em .8em;
+    border-left: 2px solid $darkGray;
+    padding: 0.1em 1em;
+    color: $darkGray;
+    font-size: 22px;
+    font-style: italic;
+  }
+
+  .comments {
+    margin-top: 10px;
+  }
+
+  .read-more {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}
+
+.post .author, .tagdescription {
+  font-family: $opensans;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: none;
+  font-style: italic;
+}
+
+.back {
+  margin-top: 10px;
+}
+
+div#main {
+  padding-bottom: 30px;
+}
+
+.wrapper-footer {
+  margin-top: 50px;
+  border-top: 1px solid #ddd;
+  background-color: $darkGray;
+  color: $white;
+  font-size: 12px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+.wrapper-footer a {
+  color: $white;
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin: 0 0 60px; /* bottom = footer height */
+}
+.wrapper-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+}
+
+.paginator {
+  padding-top: 30px;
+  font-size: 12px;
+  text-align: right;
+}
+
+.headerpic img {
+  float: left;
+  height: 60px;
+  background: #555;
+  clip-path: circle(60px at center);
+}
+
+.clip-circle {
+
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+}
+
+img.clip-circle {
+  margin-right: 15px;
+}
+
+.headerpic h1 {
+  position: relative;
+  top: 5px;
+  left: 10px;
+}
+
+
+
+@import "highlights";

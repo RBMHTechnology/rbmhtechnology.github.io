@@ -1,0 +1,43 @@
+
+//
+// VARIABLES
+//
+
+// RED BULL Colors
+// PRIMARY
+$black: #000;
+$white: #fff;
+$darkGray: #646567;
+$lightGray: #cccccc;
+$red: #db0a40;
+$verylightGray: #f8f8f8;
+
+//SECONDARY
+$darkYellow: #f2940a;
+$yellow: #fad50a;
+$lightBlue: #0a86cb;
+$darkBlue: #0a3064;
+
+//RED BULL OPENSANS Fonts
+@font-face {
+  font-family: "open-sans", sans-serif;
+}
+
+@font-face {
+  font-family: "open-sans-condensed", sans-serif;
+}
+
+
+$opensans: "open-sans", sans-serif;
+$opensanscondensed: "open-sans-condensed", sans-serif;
+
+// RED BULL Fonts
+$futuracomboldcondensed:"futura-pt-condensed", "open-sans-condensed",sans-serif;
+
+
+// Mobile breakpoints
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}

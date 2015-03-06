@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{% assign author = site.data.authors.[page.author] %}
+<header id="post-header">
+    <h1 id="post-title">Articles by Author <em>{{author.name}}</em></h1>
+</header>
+
+{% for post in site.posts do %}
+{% if post.author == page.author %}
+
+<h4 class="list-group-item-heading"><a href="{{ post.url }}" class="list-group-item">{{ post.title }}</a><div class="tagdescription">{{post.date | date: "%B %e, %Y"}} by {% if author.pic != null %}{{ author.name }}{% else %}{{ post.author }}{% endif %}</div></h4>
+
+{% endif %}
+{% endfor %}
+<div class="back"><a href="javascript:history.back(-1)">< back</a></div>

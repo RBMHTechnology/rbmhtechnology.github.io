@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<header id="post-header">
+    <h1 id="post-title">Blog</h1>
+</header>
+
+
+<div class="posts">
+    {% for post in paginator.posts %}
+    <article class="post">
+
+        {% assign author = site.data.authors.[post.author] %}
+        {% if author.name != null %}
+        {% if author.pic != null %}<div class="headerpic titlearea"><img src="{{ author.pic }}" alt="{{author.name}}" class="clip-circle"/>{% else %}<div class="titlearea">{% endif %}<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br/><div class="author">{{post.date | date: "%B %e, %Y"}} by <a rel="author" href="{{ site.baseurl }}/{{ author.link }}" title="{{ author.name }}" class="authorlist">{{ author.name }}</a></div></h2><div></div></div>
+        {% else %}
+        <div class="titlearea"><h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br/><div class="author">{{post.date | date: "%B %e, %Y"}} by {{ post.author }}</div></h2></div>
+        {% endif %}
+        <div class="entry">
+            {{ post.content | truncatewords:40}}
+        </div>
+
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more...</a>
+    </article>
+    {% endfor %}
+
+    {% if paginator == null %}
+    <h4><em>Sorry, currently no blog posts available.</em></h4>
+    {% endif %}
+
+    {% if paginator.total_posts > site.paginate %}
+    <div class="paginator">
+        {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+        <a href="/blog/">Prev</a>
+        {% else %}
+        <a href="/blog/page{{ paginator.previous_page }}">Prev</a>
+        {% endif %}
+        {% else %}
+        <span class="disabled">Prev</span>
+        {% endif %}
+        {% if paginator.page == 1 %}
+        <span class="active">1</span>
+        {% else %}
+        <a href="/blog/">1</a>
+        {% endif %}
+        {% for count in (2..paginator.total_pages) %}
+        {% if count == paginator.page %}
+        <span class="active">{{ count }}</span>
+        {% else %}
+        <a href="/blog/page{{ count }}">{{ count }}</a>
+        {% endif %}
+        {% endfor %}
+        {% if paginator.next_page %}
+        <a href="/blog/page{{ paginator.next_page }}">Next</a>
+        {% else %}
+        <span class="disabled">Next</span>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>

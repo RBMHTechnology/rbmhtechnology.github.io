@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    <meta name="author" content="{{ site.name }}" />
+    <meta name="description" content="{{ site.description }}">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <script src="//fonts.redbullmediahouse.com/snv5vzo.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.logo }}" /></a>
+
+          <div class="site-info" id="gonnaBeOnTheBottom">
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-description"><a href="{{ site.baseurl }}/">{{ site.description }}</a></p>
+          </div>
+
+          <nav>
+              <ul>
+                  <li>
+                      <a href="{{ site.baseurl }}/blog/">
+                          <span><i class="fa fa-comment fa-lg"></i></span>
+                      </a>
+                  </li>
+                  <li>
+                  <form action="../">
+                      <select onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
+                          <option value="">Choose a project...</option>
+                          <option value="http://rbmhtechnology.github.io/eventuate/">Eventuate</option>
+                      </select>
+                  </form>
+                  </li>
+              </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      {{ content }}
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+            &copy; Red Bull Media House GmbH | <a href="{{ site.baseurl }}/imprint">Imprint</a> | <a href="{{ site.baseurl }}/termsconditions">Terms & Conditions</a> | <a href="{{ site.baseurl }}/dataprivacypolicy">Data Privacy Policy</a>
+        </footer>
+      </div>
+    </div>
+
+    {% include analytics.html %}
+  </body>
+</html>

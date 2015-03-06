@@ -1,1 +1,35 @@
-Site under construction
+---
+layout: default
+---
+<div class="titlearea"><h1>RBMH Open Source Projects</h1></div>
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+<div class="titlearea"><h2><span class="eventuate rbicons"><i class="fa fa-calendar fa"></i></span>Eventuate</h2></div>
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p><a href="#" class="read-more">Documentation</a><br>
+<a href="#" class="read-more">Source Code</a>
+</p>
+<hr/>
+<div class="titlearea"><h1>RBMH Blog</h1></div>
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+
+<div class="posts">
+    {% for post in site.posts limit:site.limitPostsOnHomePage %}
+    <article class="post">
+
+        {% assign author = site.data.authors.[post.author] %}
+        {% if author.name != null %}
+        {% if author.pic != null %}<div class="headerpic titlearea"><img src="{{ author.pic }}" alt="{{author.name}}" class="clip-circle"/>{% else %}<div class="titlearea">{% endif %}<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br/><div class="author">{{post.date | date: "%B %e, %Y"}} by <a rel="author" href="{{ site.baseurl }}/{{ author.link }}" title="{{ author.name }}" class="authorlist">{{ author.name }}</a></div></h2><div></div></div>
+        {% else %}
+        <div class="titlearea"><h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br/><div class="author">{{post.date | date: "%B %e, %Y"}} by {{ post.author }}</div></h2></div>
+        {% endif %}
+      <div class="entry">
+        {{ post.content | truncatewords:40}}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more...</a>
+    </article>
+  {% endfor %}
+
+  <h3><a href="{{ site.baseurl }}/blog" class="read-more">MORE POSTS...</a></h3>
+
+</div>
