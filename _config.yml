@@ -14,10 +14,10 @@ logo: /images/RedBullMediaHouse-dark.png
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) if you want to track your visits
 google_analytics:
 
-# Your website URL (e.g. http://www.redbullmediahouse.com/
+# Your website URL (e.g. http://www.redbullmediahouse.com
 # Used for Sitemap.xml and your RSS feed
 # Depending of the URL of RBMH Technology Open Source Blog
-url: http://rbmhtechnology.github.io/
+url: http://rbmhtechnology.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
