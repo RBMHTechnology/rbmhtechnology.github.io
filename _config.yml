@@ -17,7 +17,7 @@ google_analytics:
 # Your website URL (e.g. http://www.redbullmediahouse.com/
 # Used for Sitemap.xml and your RSS feed
 # Depending of the URL of RBMH Technology Open Source Blog
-url:
+url: http://rbmhtechnology.github.io/
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
