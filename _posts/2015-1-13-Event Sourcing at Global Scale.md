@@ -39,10 +39,10 @@ Like in akka-persistence, <code>EventsourcedActor</code>s (EAs) produce events t
 
 From this perspective, a replicated event log is the backbone of a distributed, durable and causality-preserving event bus that also provides the full history of events, so that event consumers can reconstruct application state any time by replaying events. For exchanging events, EAs may be co-located at the same site (Fig. 1) or distributed across sites (Fig. 2)
 
-![Intra-site EA collaboration]({{ site.baseurl }}/images/intra-site.jpg)
+![Intra-site EA collaboration]({{ site.baseurl }}/images/intra-site.png)
 Fig. 1: Intra-site EA collaboration
 
-![Inter-site EA collaboration]({{ site.baseurl }}/images/inter-site.jpg)
+![Inter-site EA collaboration]({{ site.baseurl }}/images/inter-site.png)
 Fig. 2: Inter-site EA collaboration
 
 We think that our distributed event bus might be an interesting implementation option of Akka’s <a href="http://doc.akka.io/docs/akka/2.3.8/scala/event-bus.html">event bus</a>, especially for distributed event-based collaboration in an Akka <a href="http://doc.akka.io/docs/akka/2.3.8/scala/cluster-usage.html">cluster</a>. In this case, Akka cluster applications could also rely on causal ordering of events. 
