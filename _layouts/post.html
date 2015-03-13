@@ -11,7 +11,7 @@ layout: default
     {% else %}
     <div class="titlearea"><h1>{{ post.title }}<br/><div class="author">{{post.date | date: "%B %e, %Y"}} by {{ post.author }}</div></h1></div>
     {% endif %}
-    <div class="entry">
+    <div class="entry"><br>
     {{ content }}
         {% if post.tags.size > 0 %}
         {% capture tags_content %} with {% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
