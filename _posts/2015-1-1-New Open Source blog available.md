@@ -1,6 +1,6 @@
 ---
 layout: post
-title: New RBMH Open Source blog available
+title: NEW RBMH OPEN SOURCE BLOG AVAILABLE
 author: purthaler
 tag: rbmhtech
 ---

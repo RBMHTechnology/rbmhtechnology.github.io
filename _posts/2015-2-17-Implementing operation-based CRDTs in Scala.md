@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Implementing operation-based CRDTs in Scala
+title: IMPLEMENTING OPERATION-BASED CRDTs IN SCALA
 author: mkrasser
 tag: eventuate
 ---

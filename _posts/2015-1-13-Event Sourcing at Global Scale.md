@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Event Sourcing at Global Scale
+title: EVENT SOURCING AT GLOBAL SCALE
 author: mkrasser
 tag: eventuate
 ---

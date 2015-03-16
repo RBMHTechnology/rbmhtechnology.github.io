@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lorem ipsum
+title: LOREM IPSUM
 author: fkranawetter
 tag: [rbmhtech,eventuate]
 ---
