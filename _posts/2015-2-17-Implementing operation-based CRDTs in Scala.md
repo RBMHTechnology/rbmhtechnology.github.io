@@ -32,15 +32,15 @@ Event-Sourced Actors
 
 CmRDT update specifications in the paper have a close relationship to the command and event handler of an event-sourced actor. A CmRDT update has two phases. The first phase is called <em>atSource</em>: 
 
-<blockquote>
+<quote>
 	It takes its arguments from the operation invocation; it is not allowed to make side effects; it may compute results, returned to the caller, and/or prepare arguments for the second phase.
-</blockquote>
+</quote>
 
 To <em>prepare arguments for the second phase</em>, update-operation events are generated and persisted by the command handler. The second update phase is called <em>downstream</em>. It executes
 
-<blockquote>
+<quote>
   … immediately at the source, and asynchronously, at all other replicas; it can not return results.
-</blockquote>
+</quote>
 
 The <em>downstream</em> phase executes by consuming update-operation events in the event handler. Not only does the local replica consume the events it generated and persisted but also all other replicas on the same replicated event log consume these events (= reliable broadcast). Consumed update-operation events finally change the state of CmRDTs that are maintained by event-sourced actors in-memory.
 
