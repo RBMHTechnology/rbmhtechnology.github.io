@@ -45,6 +45,7 @@ Fig. 1: Intra-site EA collaboration
 ![Inter-site EA collaboration]({{ site.baseurl }}/images/inter-site.png)<br>
 Fig. 2: Inter-site EA collaboration
 
+
 We think that our distributed event bus might be an interesting implementation option of Akka’s <a href="http://doc.akka.io/docs/akka/2.3.8/scala/event-bus.html">event bus</a>, especially for distributed event-based collaboration in an Akka <a href="http://doc.akka.io/docs/akka/2.3.8/scala/cluster-usage.html">cluster</a>. In this case, Akka cluster applications could also rely on causal ordering of events. 
 
 One special mode of collaboration is state replication: EA instances of the same type consume each other’s events to reconstruct application state on different sites (more on that later). A related example is to maintain hot-standby instances of EAs on the same site to achieve fail-over times of milliseconds. Another example of collaboration is a distributed business process: EAs of different type process each other’s events to achieve a common goal. Reliability of the distributed business process is given by durability of events in the event log and event replay in case of failures. 
