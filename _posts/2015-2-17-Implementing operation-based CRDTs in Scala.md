@@ -32,9 +32,7 @@ Event-Sourced Actors
 
 CmRDT update specifications in the paper have a close relationship to the command and event handler of an event-sourced actor. A CmRDT update has two phases. The first phase is called <em>atSource</em>: 
 
-<blockquote>
-	It takes its arguments from the operation invocation; it is not allowed to make side effects; it may compute results, returned to the caller, and/or prepare arguments for the second phase.
-</blockquote>
+> It takes its arguments from the operation invocation; it is not allowed to make side effects; it may compute results, returned to the caller, and/or prepare arguments for the second phase.
 
 To <em>prepare arguments for the second phase</em>, update-operation events are generated and persisted by the command handler. The second update phase is called <em>downstream</em>. It executes
 
