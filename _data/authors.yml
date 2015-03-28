@@ -21,3 +21,9 @@ mkrasser:
     name: Martin Krasser
     link: mkrasser/
     pic: /authors/mkrasser.jpg
+
+aconstantin:
+    id: aconstantin
+    name: Alexander Constantin
+    link: aconstantin/
+    pic: /authors/aconstantin.jpg
