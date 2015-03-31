@@ -5,7 +5,7 @@ author: aconstantin
 tag: rbmhtech
 ---
 
-All of our projects are continously built on our continous integration servers, like most of us do. Beside publishing the regular artifacts into our maven repository, the documentation artifacts gets published as well.
+All of our projects are continuously built on our continuous integration servers, like most of us do. Beside publishing the regular artifacts into our maven repository, the documentation artifacts get  published as well.
 Our goal was to give all our development teams a convenient access to each and every published documentation artifact, including the frequent changing snapshot artifacts.
 
 The obvious way to accomplish this was to start up a webserver and ensure that each and every build job uploads its documentation artifacts to the webserver. But that would require a lot of work
