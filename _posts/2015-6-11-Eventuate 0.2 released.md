@@ -34,4 +34,4 @@ New features in Eventuate 0.2 include:
 - [Custom snapshot serialization](http://rbmhtechnology.github.io/eventuate/reference/event-sourcing.html#custom-snapshot-serialization).
 - [Example application](http://rbmhtechnology.github.io/eventuate/example-application.html) can now save and recover from order snapshots.
 
-You can find further details in the release notes. If you have any questions or comments, please [let us know](https://groups.google.com/forum/#!forum/eventuate).
+You can find further details in the [release notes](https://github.com/RBMHTechnology/eventuate/wiki/Eventuate-0.2-release-notes). If you have any questions or comments, please [let us know](https://groups.google.com/forum/#!forum/eventuate).
