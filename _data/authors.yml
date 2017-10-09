@@ -27,3 +27,9 @@ aconstantin:
     name: Alexander Constantin
     link: aconstantin/
     pic: /authors/aconstantin.jpg
+
+tkurz:
+    id: tkurz
+    name: Thomas Kurz
+    link: tkurz/
+    pic: /authors/tkurz.png
