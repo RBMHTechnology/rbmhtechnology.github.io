@@ -7,8 +7,6 @@ tag: vind
 
 ## Vind - Information Discovery for Java
 
-*This article was originally posted [here](https://rbmhtechnology.github.io/vind/blog/posts/2017-10-09_vind_-_information_discovery_for_java.html).*
-
 We all know it. When dealing with application development we often face the same problem again and again.
 When a problem comes up for the first time you study it, think about a proper solution, search for fitting technology
 and build the solution which fits best. For the second time, you reuse some code (by copy-paste), debug it and make it
