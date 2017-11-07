@@ -97,7 +97,7 @@ adaption, evolution, and recommendation. This stack shows all the components tha
 for Vind.
 
 {:.img-medium-center}
-![Vind Modules](images/vind-modules.png)
+![Vind Modules](../images/vind-modules.png)
 
 As it is the basis for all the further work we started with the definition and implementation of the
 basic features - indexing and searching. Vind can be splitted into two parts, client and server. The lib thereby
