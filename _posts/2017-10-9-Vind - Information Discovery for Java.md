@@ -96,7 +96,7 @@ It is rather meant to support you with the whole *Information Discovery* environ
 adaption, evolution, and recommendation. This stack shows all the components that are planned
 for Vind.
 
-{:.img-medium-center}
+{:style="width:50%"}
 ![Vind Modules](../images/vind-modules.png)
 
 As it is the basis for all the further work we started with the definition and implementation of the
