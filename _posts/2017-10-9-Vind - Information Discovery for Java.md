@@ -28,21 +28,21 @@ a view steps ahead:
 
 ### 1. Include Vind by dependency
 
-```xml
+{% highlight xml %}
 <!-- in this case we use the embedded solr server -->
 <dependency>
     <groupId>com.rbmhtechnology.vind</groupId>
     <artifactId>embedded-solr-server</artifactId>
     <version>${vind.version}</version>
 </dependency>
-```
+{% endhighlight %}
 
 ### 2. Create a Pojo with annotations
 
-```java
+{% highlight java %}
 class Post {
     
-    // The @id annotation is obligatory for the identification of your blog posts within Vind
+    // The @id annotation is obligatory for the post identification within Vind
     @Id
     private String id;
     
@@ -60,10 +60,10 @@ class Post {
     // so it can be used for sorting
     private ZonedDateTime created;
 }
-``` 
+{% endhighlight %} 
 
 ### 3. Index and Search Pojos
-```java
+{% highlight java %}
 // Get an instance of a server (in this case a embedded solr server)
 SearchServer server = SearchServer.getInstance();
 
@@ -79,7 +79,7 @@ FulltextSearch search = Search
     .facet("category","news");
 
 BeanSearchResult<Post> result = server.execute(search, Post.class);
-```
+{% endhighlight %}
 
 That's it. Your applications now includes a simple search functionality.
 Of course, Vind can do much more things, but we follow a simple paradigm:
