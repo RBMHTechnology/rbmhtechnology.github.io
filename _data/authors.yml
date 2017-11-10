@@ -33,3 +33,9 @@ tkurz:
     name: Thomas Kurz
     link: tkurz/
     pic: /authors/tkurz.jpg
+
+anoriega:
+    id: anoriega
+    name: Alfonso Noriega
+    link: anoriega/
+    pic: /authors/anoriega.jpg
