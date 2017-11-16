@@ -8,7 +8,7 @@ tag: vind
 ## Vind - Complex Fields with simple Code
 In our previous post, [*Vind - Information Discovery for Java*](https://rbmhtechnology.github.io/Vind-Information-Discovery-for-Java/),
 we have already had a glimpse of how to build a basic search application with
-**Vind** and how its guts look like. Most of the basic custom search scenarios
+*Vind* and how its guts look like. Most of the basic custom search scenarios
 would be covered by a simple implementation as the one described before but,
 what happens when we face a not-as-dumb use case?
 
@@ -79,15 +79,15 @@ class Post {
 {% endhighlight %}
 
 #### 2. Complex fields
-The model is ready but **Vind** does not know how to index a field of type
-*Comments.class*, as it is not one of the basic types supported. We need to assist
+The model is ready but *Vind* does not know how to index a field of type
+`Comments.class`, as it is not one of the basic types supported. We need to assist
 the library by providing an annotation which specifies how to index the complex
 field.
 
 Time to decide how to use this comment information to search has arrived! as starter
 lets suppose that the target is just to do fulltext search on blog contents and
-comment texts. To do so we will instruct **Vind** to index the comment field as
-a fulltext **Vind** field by adding the following annotation:
+comment texts. To do so we will instruct *Vind* to index the comment field as
+a fulltext *Vind* field by adding the following annotation:
 
 {% highlight java %}
 //Definition of a complex field 'flatification'
@@ -126,8 +126,8 @@ comments.
 
 ### A dive in the @ComplexField annotation
 
-What else can you do with the complex fields? Lets have a look in detail to the  *@ComplexField* annotation. It supports a set of options which mostly match with
-the existing basic **Vind** annotations: *store, facet, suggestion, fullText and
+What else can you do with the complex fields? Lets have a look in detail to the  `@ComplexField` annotation. It supports a set of options which mostly match with
+the existing basic *Vind* annotations: *store, facet, suggestion, fullText and
 sort* plus the *advanceFilter* option.
 
 {% highlight java %}
@@ -144,18 +144,16 @@ Those options allow us to describe, through the annotation, how the complex fiel
 For each of the aforementioned use cases a way to calculate a value is provided
 by the following three options:
 
-* **_function_**: it specifies a method to obtain the value to be indexed. **Vind** includes two functions: *GetterFunction* and *ConcatFunction*. The first one returns the value of the field specified in *fieldName* and the second the concatenation, blank space separated, of the values of the fields listed. To add your own function it is as easy as implementing *java.util.function.Function* or extend Vinds [ParameterFunction](https://github.com/RBMHTechnology/vind/blob/master/annotations/src/main/java/com/rbmhtechnology/vind/annotations/util/FunctionHelpers.java).
+* **_function_**: it specifies a method to obtain the value to be indexed. **Vind** includes two functions: *GetterFunction* and *ConcatFunction*. The first one returns the value of the field specified in *fieldName* and the second the concatenation, blank space separated, of the values of the fields listed. To add your own function it is as easy as implementing `java.util.function.Function` or extend Vinds [ParameterFunction](https://github.com/RBMHTechnology/vind/blob/master/annotations/src/main/java/com/rbmhtechnology/vind/annotations/util/FunctionHelpers.java).
 * **_fieldName_**: a list of names where the function will be applied. Default value is an empty list.
 * **_returnType_**: The expected return type of the function, default is *String*.
 
-#### Real case scenario
-If you are wondering whether this would be useful or not in a real life
-development and how it would work you are free to visit the [Billiltii site](https://billitii.com/)
-and download the app which is using a back-end search empowered by *Vind*.
+#### Real case scenarios
+*Vind* with its complex fields in particular is a backbone for Information Discovery within the Redbull Digital Asset Management System and other internal Redbull information systems. If you want to have a look at other use cases where *Vind* and complex fields are in place visit the [Billiltii site](https://billitii.com/) and download the app.
 
 ![billitii logo](https://billitii.com/wp-content/themes/billitii_new/images/BiLLiTii.png)
 
-In the *Billitii* app model a thread (triggered by a user question) holds a set
+In the *Billitii* app-model a thread (triggered by a user question) holds a set
 of answers which have been *flatified* in order to be able to find an already
 existing thread containing an answer fitting a new question being asked. This
 way the incoming question may be inmediatly redirected to a thread where it has
