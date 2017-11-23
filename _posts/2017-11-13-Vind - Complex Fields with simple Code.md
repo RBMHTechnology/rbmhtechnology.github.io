@@ -149,7 +149,8 @@ by the following three options:
 * **_returnType_**: The expected return type of the function, default is *String*.
 
 #### Real case scenarios
-*Vind* with its complex fields in particular is a backbone for Information Discovery within the Redbull Digital Asset Management System and other internal Redbull information systems. If you want to have a look at other use cases where *Vind* and complex fields are in place visit the [Billiltii site](https://billitii.com/) and download the app.
+*Vind* with its complex fields in particular is a backbone for Information Discovery within the Red Bull Media 
+House Digital Asset Management System and other internal Red Bull Media House information systems. If you want to have a look at other use cases where *Vind* and complex fields are in place visit the [Billiltii site](https://billitii.com/) and download the app.
 
 ![billitii logo](https://billitii.com/wp-content/themes/billitii_new/images/BiLLiTii.png)
 
