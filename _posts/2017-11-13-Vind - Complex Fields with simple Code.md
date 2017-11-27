@@ -92,7 +92,10 @@ a fulltext *Vind* field by adding the following annotation:
 {% highlight java %}
 //Definition of a complex field 'flatification'
 @ComplexField(
-    fullText = @Operator(function = FunctionHelpers.GetterFunction.class, fieldName = {"comment"})
+    fullText = @Operator(
+      function = FunctionHelpers.GetterFunction.class, 
+      fieldName = {"comment"}
+    )
 )
 private List<Comment> comments;
 {% endhighlight %}
@@ -113,9 +116,18 @@ specified on query time.
 {% highlight java %}
 //Definition of a complex field 'flatification'
 @ComplexField(
-    fullText = @Operator(function = FunctionHelpers.GetterFunction.class, fieldName = {"comment"}),
-    facet = @Operator(function = FunctionHelpers.GetterFunction.class, fieldName = {"userName"}),
-    advanceFilter = @Operator(function = FunctionHelpers.GetterFunction.class, fieldName = {"featured"})
+    fullText = @Operator(
+      function = FunctionHelpers.GetterFunction.class, 
+      fieldName = {"comment"}
+    ),
+    facet = @Operator(
+      function = FunctionHelpers.GetterFunction.class,
+      fieldName = {"userName"}
+    ),
+    advanceFilter = @Operator(
+      function = FunctionHelpers.GetterFunction.class, 
+      fieldName = {"featured"}
+    )
 )
 private List<Comment> comments;
 {% endhighlight %}
@@ -132,9 +144,18 @@ sort* plus the *advanceFilter* option.
 
 {% highlight java %}
 @ComplexField(
-  fullText = @Operator(function = FunctionHelpers.ConcatFunction.class, fieldName = {"name", "synonym"}),
-  facet = @Operator(function = FunctionHelpers.GetterFunction.class, fieldName = {"name"}),
-  advanceFilter =  @Operator(function = FunctionHelpers.GetterFunction.class, fieldName = {"id"})
+  fullText = @Operator(
+    function = FunctionHelpers.ConcatFunction.class,
+    fieldName = {"name", "synonym"}
+  ),
+  facet = @Operator(
+    function = FunctionHelpers.GetterFunction.class,
+    fieldName = {"name"}
+  ),
+  advanceFilter =  @Operator(
+    function = FunctionHelpers.GetterFunction.class,
+    fieldName = {"id"}
+  )
 )
 private Concept topic;
 {% endhighlight %}
@@ -150,7 +171,7 @@ by the following three options:
 
 #### Real case scenarios
 *Vind* with its complex fields in particular is a backbone for Information Discovery within the Red Bull Media 
-House Digital Asset Management System and other internal Red Bull Media House information systems. If you want to have a look at other use cases where *Vind* and complex fields are in place visit the [Billiltii site](https://billitii.com/) and download the app.
+House Digital Asset Management System and other internal Red Bull Media House information systems. If you want to have a look at other use cases where *Vind* and complex fields are in place visit the [Billiltii website](https://billitii.com/) and download the app.
 
 ![billitii logo](https://billitii.com/wp-content/themes/billitii_new/images/BiLLiTii.png)
 
