@@ -1,7 +1,7 @@
 ---
 layout: post
 title: VIND - COMPLEX FIELDS WITH SIMPLE CODE
-author: anoriega
+author: tkurz
 tag: vind
 ---
 
