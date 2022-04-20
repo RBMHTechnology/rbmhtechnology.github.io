@@ -10,32 +10,14 @@ fkranawetter:
     link: fkranawetter/
     pic: /authors/fkranawetter.jpg
 
-mjoschko:
-    id: mjoschko
-    name: Markus Joschko
-    link: mjoschko/
-    pic: /authors/mjoschko.jpg
-
 mkrasser:
     id: mkrasser
     name: Martin Krasser
     link: mkrasser/
     pic: /authors/mkrasser.jpg
 
-aconstantin:
-    id: aconstantin
-    name: Alexander Constantin
-    link: aconstantin/
-    pic: /authors/aconstantin.jpg
-
 tkurz:
     id: tkurz
     name: Thomas Kurz
     link: tkurz/
     pic: /authors/tkurz.jpg
-
-anoriega:
-    id: anoriega
-    name: Alfonso Noriega
-    link: anoriega/
-    pic: /authors/anoriega.jpg
